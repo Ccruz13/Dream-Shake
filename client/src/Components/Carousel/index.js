@@ -53,7 +53,7 @@ const Carousel = () => {
     `;
 
     const Image = styled.img`
-        height: 80%;
+        height: 70%;
     `;
 
     const ContentContainer = styled.div`
