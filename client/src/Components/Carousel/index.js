@@ -54,6 +54,7 @@ const Carousel = () => {
 
     const Image = styled.img`
         height: 70%;
+        padding-left: 10px
     `;
 
     const ContentContainer = styled.div`
