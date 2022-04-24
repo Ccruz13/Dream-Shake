@@ -39,7 +39,7 @@ const Navbar = () => {
         ${mobile({ fontSize: "12px", marginLeft: "10px" })}
     `;
 
-    const quantity = useSelector(state => state.cart.quantity)
+    const quantity = useSelector(state => state.cart.cartTotalQuantity)
 
     return (
         <Container>
@@ -50,8 +50,12 @@ const Navbar = () => {
                 </Left>
                 </Link>
                 <Right>
+                    <Link to="/register">
                     <MenuItem>REGISTER</MenuItem>
+                    </Link>
+                    <Link to="/login">
                     <MenuItem>SIGN IN</MenuItem>
+                    </Link>
                     <Link to="/cart">
                         <MenuItem>
                             <Badge badgeContent={quantity} color="primary">

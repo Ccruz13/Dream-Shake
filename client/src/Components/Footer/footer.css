@@ -1,0 +1,23 @@
+.footer {
+    background: linear-gradient(
+        90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
+    width: 100%;
+    padding: 2em;
+    color: #fff;
+    bottom: 0;
+  }
+
+  .footer-logo{
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+  }
+  
+  .footer-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto 0 auto;
+  }

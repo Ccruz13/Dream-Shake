@@ -135,6 +135,7 @@ const Product = () => {
     getProduct();
   }, [id]);
 
+  //INC OR DEC QUANTITY
   const handleQuantity = (type) => {
     if (type === "dec") {
       quantity > 1 && setQuantity(quantity - 1);
@@ -143,6 +144,7 @@ const Product = () => {
     }
   };
 
+  //ADD TO CART
   const handleClick = () => {
     dispatch(
       addProduct({ ...product, quantity, color, size })
