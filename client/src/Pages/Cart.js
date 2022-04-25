@@ -232,7 +232,7 @@ const Cart = () => {
                   </ProductAmountContainer>
                   <ProductPrice>
                     $ {product.price * product.quantity}
-                    <DeleteOutline style={{ paddingLeft: "15px" }} onClick={handleRemoveFromCart}/>
+                    <DeleteOutline style={{ paddingLeft: "15px", cursor: 'pointer' }} onClick={handleRemoveFromCart}/>
                   </ProductPrice>
                 </PriceDetail>
               </Product>

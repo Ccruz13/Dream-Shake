@@ -27,7 +27,14 @@ const Wrapper = styled.div`
   ${mobile({ width: "75%" })}
 `;
 
-const Title = styled.h1`
+const Logo = styled.h1`
+    font-sixe: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 15px;
+`;
+
+const Title = styled.h2`
   font-size: 24px;
   font-weight: 300;
 `;
@@ -58,16 +65,6 @@ const Button = styled.button`
   cursor: pointer;
 `;
 
-const Send = styled.button`
-  width: 40%;
-  border: none;
-  padding: 15px 10px;
-  background-color: teal;
-  color: white;
-  cursor: pointer;
-  float: right;
-`;
-
 const Error = styled.span`
   color: red;
 `;
@@ -88,6 +85,9 @@ const Register = () => {
   return (
     <Container>
       <Wrapper>
+        <Link to="/" style={{ textDecoration: 'none', color:'black' }}>
+        <Logo>Dream Shake</Logo>
+        </Link>
         <Title>CREATE AN ACCOUNT</Title>
         <Form>
           <Input 
@@ -112,11 +112,10 @@ const Register = () => {
             By creating an account, I consent to the processing of my personal
             data in accordance with the <b>PRIVACY POLICY</b>
           </Agreement>
+       
           <Button onClick={handleClick} disabled={isFetching}>CREATE</Button>
           {error && <Error>Something went wrong...</Error>}
-          <Link to="/">
-            <Send>Send Me Home</Send>
-          </Link>
+  
         </Form>
       </Wrapper>
     </Container>

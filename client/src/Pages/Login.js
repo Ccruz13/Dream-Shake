@@ -27,7 +27,14 @@ const Wrapper = styled.div`
   ${mobile({ width: "75%" })}
 `;
 
-const Title = styled.h1`
+const Logo = styled.h1`
+    font-sixe: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 15px;
+`;
+
+const Title = styled.h2`
   font-size: 24px;
   font-weight: 300;
 `;
@@ -82,6 +89,9 @@ const Login = () => {
   return (
     <Container>
       <Wrapper>
+      <Link to="/" style={{ textDecoration: 'none', color:'black' }}>
+        <Logo>Dream Shake</Logo>
+        </Link>
         <Title>SIGN IN</Title>
         <Form>
           <Input
