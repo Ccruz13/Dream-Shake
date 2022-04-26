@@ -1,7 +1,7 @@
 import { DeleteOutline } from "@material-ui/icons";
 import { useSelector } from "react-redux";
 import styled from "styled-components";
-// import Footer from "../components/Footer";
+import Footer from "../Components/Footer/index";
 import Navbar from "../Components/Navbar/index";
 import { mobile } from "../responsive";
 import StripeCheckout from "react-stripe-checkout";
@@ -12,9 +12,11 @@ import { removeProduct, getTotals } from "../redux/cartRedux";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 
-const KEY = process.env.REACT_APP_STRIPE;
+const KEY = "pk_test_51Kj9IKGFmay0wCW96gP2wiU98Q62eN3w2Gh67RyeCZFiuIJH7szfNinHCyczjF4y994gOiBd64cdeN32YJOM6Nub00C5Z7RMk7";
 
-const Container = styled.div``;
+const Container = styled.div`
+  height: 100vh;
+`;
 
 const Wrapper = styled.div`
   padding: 20px;
@@ -177,7 +179,7 @@ const Cart = () => {
       try {
         const res = await userRequest.post("/checkout/payment", {
           tokenId: stripeToken.id,
-          amount: 500,
+          amount: cart.cartTotalAmount,
         });
         history.push("/success", {
           stripeData: res.data,
@@ -195,6 +197,7 @@ const Cart = () => {
     dispatch(removeProduct(product));
   };
   return (
+    <div>
     <Container>
       <Navbar />
       <Wrapper>
@@ -272,8 +275,9 @@ const Cart = () => {
           </Summary>
         </Bottom>
       </Wrapper>
-      {/* <Footer /> */}
     </Container>
+      <Footer />
+      </div>
   );
 };
 

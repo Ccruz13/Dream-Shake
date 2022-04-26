@@ -1,6 +1,7 @@
 import { Add, Remove } from "@material-ui/icons";
 import styled from "styled-components";
 import Navbar from "../Components/Navbar/index";
+import Footer from '../Components/Footer/index'
 import { mobile } from "../responsive";
 import { useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
@@ -8,7 +9,9 @@ import { publicRequest } from "../requestMethods";
 import { addProduct } from "../redux/cartRedux";
 import { useDispatch } from "react-redux";
 
-const Container = styled.div``;
+const Container = styled.div`
+  height: 100vh;
+`;
 
 const Wrapper = styled.div`
   padding: 50px;
@@ -151,6 +154,7 @@ const Product = () => {
     );
   };
   return (
+    <div>
     <Container>
       <Navbar />
       <Wrapper>
@@ -188,6 +192,8 @@ const Product = () => {
         </InfoContainer>
       </Wrapper>
     </Container>
+    <Footer/>
+    </div>
   );
 };
 

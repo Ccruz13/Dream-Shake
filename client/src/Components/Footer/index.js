@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 function Footer() {
     return (
-        <section className='footer'>
+        <div className='footer'>
             <div className='footer-wrap'>
                 <div className='footer-logo'>
                 <Link to="/" style={{ textDecoration: 'none', color: 'black' }}>
@@ -15,7 +15,7 @@ function Footer() {
                 </div>
                 <small className='website-rights'>Dream Shake © 2022</small>
             </div>
-        </section>
+        </div>
     )
 }
 
