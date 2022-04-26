@@ -1,0 +1,22 @@
+{
+  "name": "dream-shake",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "develop": "concurrently \"cd server && npm run start\" \"cd client && npm start\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ccruz13/Dream-Shake.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ccruz13/Dream-Shake/issues"
+  },
+  "homepage": "https://github.com/Ccruz13/Dream-Shake#readme",
+  "dependencies": {
+    "concurrently": "^7.1.0"
+  }
+}
